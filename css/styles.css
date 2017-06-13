@@ -1,0 +1,117 @@
+@font-face {
+    font-family: cheddar-jack;
+    src: url('../fonts/cheddarjack.ttf');
+}
+
+@font-face {
+    font-family: kgthisisnotgoodbye;
+    src: url('../fonts/KGThisIsNotGoodbye.ttf');
+}
+
+.primary-c,
+.primary-c:hover,
+.primary-c:active {
+    color: #16654A !important;
+}
+
+.primary-bg {
+    background-color: #16654A !important;
+}
+
+.secondary-c {
+    color: #98123F !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 20px;
+}
+
+.secondary-c:hover,
+.secondary-c:active {
+    color: #723835 !important;
+}
+
+.tertiary-c {
+    color: #127C98 !important;
+}
+
+.tertiary-c:hover,
+.tertiary-c:active {
+    color: #7DBBCB !important;
+}
+
+.navbar-brand {
+    font-family: cheddar-jack;
+    font-size: 3.5em;
+}
+
+#cover > img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar-brand > span {
+    font-size: .6em;
+    display:inline-block;
+    padding-left: 5px;
+    color: #427E6A;
+}
+
+.jumbotron > h1 {
+    font-family: kgthisisnotgoodbye;
+}
+
+ p > span {
+    font-size: 2em;
+}
+
+blockquote {
+    font-weight: 200;
+    margin: 0 0;
+}
+
+blockquote .fa-quote-left {
+    padding-right: 10px;
+}
+
+blockquote .fa-quote-right {
+    padding-left: 10px;
+}
+
+.quote .well {
+    background-color: #DDDDDD;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.quote img {
+    width: 100%;
+}
+
+.quote .img-wrapper {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 120px;
+    width: 120px;
+}
+
+#biz img {
+    width: 200px;
+    margin: 0 0 0 -60px;
+}
+
+#biz .img-wrapper {
+    margin-left: 20px;
+}
+
+#julia img {
+    width: 500px;
+    margin: -30px 0 0 -255px;
+}
+
+#julia .img-wrapper {
+    margin-top: 50px;
+    margin-right: 20px;
+}
