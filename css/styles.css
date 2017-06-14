@@ -8,6 +8,11 @@
     src: url('../fonts/KGThisIsNotGoodbye.ttf');
 }
 
+body {
+    font-family: 'Spectral', serif;
+    font-weight: 200;
+}
+
 .primary-c,
 .primary-c:hover,
 .primary-c:active {
@@ -40,9 +45,17 @@
     color: #7DBBCB !important;
 }
 
+.navbar {
+    font-weight: 300;
+}
+
 .navbar-brand {
     font-family: cheddar-jack;
     font-size: 3.5em;
+}
+
+.cj {
+    font-family: cheddar-jack;
 }
 
 #cover > img {
@@ -58,7 +71,8 @@
 }
 
 .jumbotron > h1 {
-    font-family: kgthisisnotgoodbye;
+    font-family: cheddar-jack;
+    color: #777777;
 }
 
  p > span {
@@ -112,6 +126,6 @@ blockquote .fa-quote-right {
 }
 
 #julia .img-wrapper {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-right: 20px;
 }
