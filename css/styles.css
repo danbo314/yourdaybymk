@@ -27,8 +27,8 @@ body {
     color: #98123F !important;
 }
 
-.navbar-default .navbar-nav > li > a {
-    font-size: 20px;
+.secondary-bg {
+    background-color: #98123F;
 }
 
 .secondary-c:hover,
@@ -45,38 +45,18 @@ body {
     color: #7DBBCB !important;
 }
 
-.navbar {
-    font-weight: 300;
-}
-
-.navbar-brand {
-    font-family: cheddar-jack;
-    font-size: 3.5em;
-}
-
 .cj {
     font-family: cheddar-jack;
 }
 
-#cover > img {
+#cover img {
     width: 100%;
     height: auto;
-}
-
-.navbar-brand > span {
-    font-size: .6em;
-    display:inline-block;
-    padding-left: 5px;
-    color: #427E6A;
 }
 
 .jumbotron > h1 {
     font-family: cheddar-jack;
     color: #777777;
-}
-
- p > span {
-    font-size: 2em;
 }
 
 blockquote {
@@ -90,14 +70,6 @@ blockquote .fa-quote-left {
 
 blockquote .fa-quote-right {
     padding-left: 10px;
-}
-
-.quote .well {
-    background-color: #DDDDDD;
-}
-
-.navbar {
-    margin-bottom: 0;
 }
 
 .quote img {
@@ -128,4 +100,41 @@ blockquote .fa-quote-right {
 #julia .img-wrapper {
     margin-top: 30px;
     margin-right: 20px;
+}
+
+.nav-item {
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav-item > a {
+    text-align: right;
+    font-size: 2em;
+    font-family: kgthisisnotgoodbye;
+    color: #777777;
+}
+
+.nav-item > span {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 0px;
+
+    -webkit-transition: width .5s;
+    transition: width .5s;
+}
+
+.nav-item:hover a {
+    text-decoration: none;
+    color: #98123F;
+}
+
+.nav-item:hover span {
+    width: 5px;
+}
+
+.logo {
+    font-size: 6em;
+    margin: 0 0 30px 0;
 }

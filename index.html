@@ -6,32 +6,23 @@
     <link href="https://fonts.googleapis.com/css?family=Spectral:200,300" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
 </head>
 <body>
 
 <div class="container-fluid">
-    <nav id="header" class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mk-navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand primary-c" href="#">Your Day <span>by MK</span></a>
-            </div>
-            <div class="collapse navbar-collapse" id="mk-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#cover">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <h1 class="row text-center logo primary-c cj">Your Day <span>by MK</span></h1>
     <div id="cover" class="row">
-        <img src="img/cover2.jpg">
+        <div class="col-xs-8">
+            <img src="img/cover2.jpg">
+        </div>
+        <div id="nav" class="col-xs-4">
+            <div class="nav-item"><span class="secondary-bg"></span><a href="#cover">Home</a></div>
+            <div class="nav-item"><span class="secondary-bg"></span><a href="#about">About</a></div>
+            <div class="nav-item"><span class="secondary-bg"></span><a href="#services">Services</a></div>
+            <div class="nav-item"><span class="secondary-bg"></span><a>Blog</a></div>
+            <div class="nav-item"><span class="secondary-bg"></span><a>Contact</a></div>
+        </div>
     </div>
     <div id="about" class="row">
         <div class="jumbotron  col-xs-10 col-xs-offset-1">
