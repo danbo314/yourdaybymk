@@ -9,8 +9,9 @@
 }
 
 body {
-    font-family: 'Spectral', serif;
-    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background-color: #FFFFDD;
 }
 
 .primary-c,
@@ -54,22 +55,32 @@ body {
     height: auto;
 }
 
+.jumbotron {
+    background-color: #FFFFDD;
+}
+
 .jumbotron > h1 {
     font-family: cheddar-jack;
-    color: #777777;
 }
 
 blockquote {
     font-weight: 200;
     margin: 0 0;
+    border-left-color: #16654A;
+}
+
+.blockquote-reverse {
+    border-right-color: #16654A;
 }
 
 blockquote .fa-quote-left {
     padding-right: 10px;
+    color: #16654A;
 }
 
 blockquote .fa-quote-right {
     padding-left: 10px;
+    color: #16654A;
 }
 
 .quote img {
@@ -89,6 +100,7 @@ blockquote .fa-quote-right {
 }
 
 #biz .img-wrapper {
+    margin-top: 30px;
     margin-left: 20px;
 }
 
@@ -102,36 +114,61 @@ blockquote .fa-quote-right {
     margin-right: 20px;
 }
 
-.nav-item {
-    text-align: right;
-    height: 40px;
-    line-height: 40px;
-}
-
-.nav-item > a {
-    text-align: right;
+nav li > a {
     font-size: 2em;
-    font-family: kgthisisnotgoodbye;
-    color: #777777;
+    font-weight: 400;
 }
 
-.nav-item > span {
+.navbar {
+    background-color: #FFFFDD;
+}
+
+.navbar .navbar-nav {
     display: inline-block;
-    float: left;
-    height: 100%;
-    width: 0px;
-
-    -webkit-transition: width .5s;
-    transition: width .5s;
+    float: none;
+    vertical-align: top;
+    background-color: #FFFFDD;
 }
 
-.nav-item:hover a {
-    text-decoration: none;
+.navbar .navbar-collapse {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar li {
+    margin: 0 5px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #16654A;
+    background-color: #FFFFDD;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active:hover > a,
+.navbar-default .navbar-nav > li:hover > a {
     color: #98123F;
+    border-bottom: 3px solid #98123F;
+    border-radius: 3px;
+    background-color: #FFFFDD;
 }
 
-.nav-item:hover span {
-    width: 5px;
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: inline-block;
+        text-align: center;
+        float: none;
+        margin: 0;
+        background-color: #FFFFFF;
+    }
 }
 
 .logo {
