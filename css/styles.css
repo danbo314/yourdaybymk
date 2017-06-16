@@ -63,7 +63,7 @@ body {
     font-family: cheddar-jack;
 }
 
-.jumbotron > p {
+.jumbotron p {
     font-size: 1.2em;
 }
 
@@ -177,7 +177,7 @@ nav li > a {
 }
 
 #social .fa {
-    font-size: 3em;
+    font-size: 6em;
     padding: 19px 27px;
 }
 
@@ -185,3 +185,32 @@ nav li > a {
     color: #FFFFFF;
     background-color: #16654A;
 }
+
+#social .well {
+    border-color: transparent;
+}
+
+.blue {
+    color: #428bca;
+}
+
+.has-float-label {
+    margin-bottom: 10px;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+label {
+    font-size: 100%;
+    top: .7em;
+    left: 2em;
+    font-weight: 200;
+    /*opacity: 1;*/
+}
+
+form input,
+form textarea {
+    border-radius: 4px !important;
+}
+
+/*form label {*/
+    /*color: #16654A;*/
+/*}*/
