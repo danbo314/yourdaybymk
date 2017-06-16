@@ -218,3 +218,12 @@ form textarea {
 #contact strong {
     margin-right: 10px;
 }
+
+.btn.primary-bg {
+    color: whitesmoke;
+}
+
+.btn.primary-bg:hover,
+.btn.primary-bg:active {
+    background-color: #427E6A !important;
+}
