@@ -214,3 +214,7 @@ form textarea {
 /*form label {*/
     /*color: #16654A;*/
 /*}*/
+
+#contact strong {
+    margin-right: 10px;
+}
