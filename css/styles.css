@@ -63,7 +63,8 @@ body {
     font-family: cheddar-jack;
 }
 
-.jumbotron p {
+.jumbotron p,
+.jumbotron ul {
     font-size: 1.2em;
 }
 
@@ -226,4 +227,19 @@ form textarea {
 .btn.primary-bg:hover,
 .btn.primary-bg:active {
     background-color: #427E6A !important;
+}
+
+#services ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+#services ul > li > .fa {
+    margin-right: 10px;
+    color: #16654A;
+    font-size: .7em;
+}
+
+#services h4 {
+    margin-top: 0;
 }
