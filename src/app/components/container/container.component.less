@@ -4,12 +4,24 @@
     background-color: @background-c;
     height: 125px;
 
+
+    @media (min-width: 910px) {
+        ul.social {
+            margin-left: -16px;
+        }
+    }
+
     &.navbar-default .navbar-nav {
+        background-color: @background-c;
+
         > li {
             > a {
                 color: @primary-c;
                 background-color: @background-c;
-                font-family: adequate;
+                font-family: Mesmerize;
+                font-size: 1.2em;
+                line-height: 50px;
+                text-transform: uppercase;
 
                 > span {
                     padding: 2px 5px;
@@ -29,17 +41,6 @@
             &:hover > a {
                 color: lighten(@primary-c, 20%);
             }
-        }
-    }
-
-    .navbar-nav {
-        background-color: @background-c;
-
-        li > a {
-            font-size: 1.5em;
-            font-weight: 400;
-            line-height: 50px;
-            text-transform: uppercase;
         }
     }
 
@@ -74,33 +75,5 @@
 
     .navbar-toggle {
         display: block !important;
-    }
-}
-
-ul.social {
-    list-style: none;
-    margin-bottom: 0;
-    padding: 0;
-
-    li {
-        display: inline-block;
-        font-size: 1.2em;
-        padding: 0 10px;
-    }
-
-    .fa-twitter:hover {
-        color: @twitter;
-    }
-
-    .fa-facebook:hover {
-        color: @facebook;
-    }
-
-    .fa-instagram:hover {
-        color: @insta;
-    }
-
-    .fa-pinterest:hover {
-        color: @pinterest;
     }
 }

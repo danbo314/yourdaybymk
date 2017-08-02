@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './components/main/main.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 @NgModule({
   declarations: [
     ContainerComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,
