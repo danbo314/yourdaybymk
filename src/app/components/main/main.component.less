@@ -7,11 +7,14 @@
 }
 
 section {
-    padding-top: 100px;
+    padding-top: 125px;
 }
 
 .jumbotron {
     background-color: @background-c;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
 
     > h1 {
         font-family: adequate;
@@ -21,6 +24,19 @@ section {
     p,
     ul {
         font-size: 1.4em;
+    }
+
+    img.headshot {
+        &.vert {
+            height: 532px;
+            width: auto;
+            margin-top: 7px;
+        }
+
+        &.ho {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
