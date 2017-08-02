@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -20,5 +21,9 @@ export class HomeComponent {
                 }
             }
         });
+    }
+
+    sendContact(contactForm: NgForm) {
+        console.log(contactForm);
     }
 }

@@ -9,14 +9,14 @@
             > a {
                 color: @primary-c;
                 background-color: @background-c;
-                font-family: kgthisisnotgoodbye;
+                font-family: adequate;
 
                 > span {
                     padding: 2px 5px;
                 }
 
                 .boxed {
-                    border: 2px solid @secondary-c;
+                    border: 1px solid @secondary-c;
                     color: @secondary-c;
 
                     &:hover {
@@ -36,7 +36,7 @@
         background-color: @background-c;
 
         li > a {
-            font-size: 1.3em;
+            font-size: 1.5em;
             font-weight: 400;
             line-height: 50px;
             text-transform: uppercase;
@@ -45,6 +45,10 @@
 
     .navbar-header {
         padding: 5px;
+    }
+
+    .navbar-collapse {
+        background-color: #fefefa;
     }
 }
 
@@ -58,9 +62,25 @@
     box-shadow: 0 0 5px #cbcbcb;
 }
 
+@media (min-width: 768px) and (max-width: 910px) {
+    .collapse {
+        display: none !important;
+    }
+
+    .navbar-header {
+        float: none !important;
+        margin-right: -15px;
+    }
+
+    .navbar-toggle {
+        display: block !important;
+    }
+}
+
 ul.social {
     list-style: none;
     margin-bottom: 0;
+    padding: 0;
 
     li {
         display: inline-block;

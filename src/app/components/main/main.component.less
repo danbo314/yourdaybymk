@@ -12,84 +12,89 @@ section {
 
 .jumbotron {
     background-color: @background-c;
-}
 
-.jumbotron > h1 {
-    font-family: cheddar-jack;
-}
+    > h1 {
+        font-family: adequate;
+        font-size: 3em;
+    }
 
-.jumbotron p,
-.jumbotron ul {
-    font-size: 1.2em;
+    p,
+    ul {
+        font-size: 1.2em;
+    }
 }
 
 blockquote {
     font-weight: 200;
     margin: 0 0;
     border-left-color: #16654A;
+
+    .fa-quote-left {
+        padding-right: 10px;
+        color: #16654A;
+    }
+
+    .fa-quote-right {
+        padding-left: 10px;
+        color: #16654A;
+    }
 }
 
 .blockquote-reverse {
     border-right-color: #16654A;
 }
 
-blockquote .fa-quote-left {
-    padding-right: 10px;
-    color: #16654A;
+.quote {
+    img {
+        width: 100%;
+    }
+
+    .img-wrapper {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 120px;
+        width: 120px;
+    }
 }
 
-blockquote .fa-quote-right {
-    padding-left: 10px;
-    color: #16654A;
+#biz {
+    img {
+        width: 200px;
+        margin: 0 0 0 -60px;
+    }
+
+    .img-wrapper {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
 }
 
-.quote img {
-    width: 100%;
+#julia {
+    img {
+        width: 500px;
+        margin: -30px 0 0 -255px;
+    }
+
+    .img-wrapper {
+        margin-top: 30px;
+        margin-right: 20px;
+    }
 }
 
-.quote .img-wrapper {
-    border-radius: 50%;
-    overflow: hidden;
-    height: 120px;
-    width: 120px;
-}
+#social {
+    .fa {
+        font-size: 6em;
+        padding: 19px 27px;
 
-#biz img {
-    width: 200px;
-    margin: 0 0 0 -60px;
-}
-
-#biz .img-wrapper {
-    margin-top: 30px;
-    margin-left: 20px;
-}
-
-#julia img {
-    width: 500px;
-    margin: -30px 0 0 -255px;
-}
-
-#julia .img-wrapper {
-    margin-top: 30px;
-    margin-right: 20px;
-}
-
-#social .fa {
-    font-size: 6em;
-    padding: 19px 27px;
-}
-
-#social .fa:hover {
-    color: #FFFFFF;
-    background-color: #16654A;
+        &:hover {
+            color: #FFFFFF;
+            background-color: #16654A;
+        }
+    }
 }
 
 #social .well {
     border-color: transparent;
-}
-
-.blue {
-    color: #428bca;
 }
 
 .has-float-label {
@@ -101,17 +106,14 @@ blockquote .fa-quote-right {
     top: .7em;
     left: 2em;
     font-weight: 200;
-    /*opacity: 1;*/
 }
 
-form input,
-form textarea {
-    border-radius: 4px !important;
+form {
+    input,
+    textarea {
+        border-radius: 4px !important;
+    }
 }
-
-/*form label {*/
-    /*color: #16654A;*/
-/*}*/
 
 #contact strong {
     margin-right: 10px;
@@ -119,24 +121,27 @@ form textarea {
 
 .btn.primary-bg {
     color: @background-c;
+    font-family: adequate;
+
+    &:hover,
+    &:active {
+        background-color: #427E6A !important;
+    }
 }
 
-.btn.primary-bg:hover,
-.btn.primary-bg:active {
-    background-color: #427E6A !important;
-}
+#services {
+    ul {
+        list-style: none;
+        padding-left: 5px;
 
-#services ul {
-    list-style: none;
-    padding-left: 5px;
-}
+        > li > .fa {
+            margin-right: 10px;
+            color: #16654A;
+            font-size: .7em;
+        }
+    }
 
-#services ul > li > .fa {
-    margin-right: 10px;
-    color: #16654A;
-    font-size: .7em;
-}
-
-#services h4 {
-    margin-top: 0;
+    h4 {
+        margin-top: 0;
+    }
 }

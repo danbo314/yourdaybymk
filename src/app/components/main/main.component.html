@@ -37,7 +37,7 @@
                 <p><strong>p:</strong>224-766-1901</p>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <form class="row center-block">
+                <form class="row center-block" #contactForm="ngForm" (ngSubmit)="sendContact(contactForm)">
                     <div class="form-group input-group">
                         <span class="has-float-label col-xs-12">
                             <input class="form-control" id="first" type="text" placeholder="Jane"/>
