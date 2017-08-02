@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mk-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand primary-c cj" routerLink="/" routerLinkActive="active"><img class="logo" src="../../assets/images/logo.png"/></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-right text-center" id="mk-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a routerLink="/blog" routerLinkActive="active" class="secondary-c" target="_blank"><span>Blog</span></a></li>
+                    <li><a routerLink="/home" fragment="about" routerLinkActive="active"><span>About</span></a></li>
+                    <li><a routerLink="/home" fragment="services" routerLinkActive="active"><span>Services</span></a></li>
+                    <li><a routerLink="/home" fragment="contact" routerLinkActive="active"><span class="boxed">Contact</span></a></li>
+                </ul>
+                <ul class="social">
+                    <li><a href="#" class="primary-c" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/YourDayByMK" class="primary-c" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/yourdaybymk" class="primary-c" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.pinterest.com/marykoander/?eq=Marykoander&etslf=3585" class="primary-c" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+    <div id="footer" class="row">
+        <span class="pull-left"><a href="http://danbolivar.me" target="_blank">Dan Bol&iacute;var</a> &copy; 2017</span>
+        <ul class="social pull-right">
+            <li><a href="#" class="primary-c" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/YourDayByMK" class="primary-c" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/yourdaybymk" class="primary-c" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com/marykoander/?eq=Marykoander&etslf=3585" class="primary-c" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</div>

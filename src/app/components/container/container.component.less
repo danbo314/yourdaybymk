@@ -1,0 +1,86 @@
+@import "../constants.less";
+
+.navbar {
+    background-color: @background-c;
+    height: 125px;
+
+    &.navbar-default .navbar-nav {
+        > li {
+            > a {
+                color: @primary-c;
+                background-color: @background-c;
+                font-family: kgthisisnotgoodbye;
+
+                > span {
+                    padding: 2px 5px;
+                }
+
+                .boxed {
+                    border: 2px solid @secondary-c;
+                    color: @secondary-c;
+
+                    &:hover {
+                        background: @secondary-c;
+                        color: @background-c;
+                    }
+                }
+            }
+
+            &:hover > a {
+                color: lighten(@primary-c, 20%);
+            }
+        }
+    }
+
+    .navbar-nav {
+        background-color: @background-c;
+
+        li > a {
+            font-size: 1.3em;
+            font-weight: 400;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+    }
+
+    .navbar-header {
+        padding: 5px;
+    }
+}
+
+.logo {
+    width: 300px;
+    display: inline-block;
+}
+
+#footer {
+    padding: 5px 10px;
+    box-shadow: 0 0 5px #cbcbcb;
+}
+
+ul.social {
+    list-style: none;
+    margin-bottom: 0;
+
+    li {
+        display: inline-block;
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    .fa-twitter:hover {
+        color: @twitter;
+    }
+
+    .fa-facebook:hover {
+        color: @facebook;
+    }
+
+    .fa-instagram:hover {
+        color: @insta;
+    }
+
+    .fa-pinterest:hover {
+        color: @pinterest;
+    }
+}

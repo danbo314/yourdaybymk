@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# build angular app for prod to /dist folder
+ng build --prod
+
+# deploy to firebase
+firebase deploy
