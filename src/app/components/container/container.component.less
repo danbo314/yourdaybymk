@@ -5,11 +5,11 @@
     height: 125px;
 
 
-    @media (min-width: 910px) {
-        ul.social {
-            margin-left: -16px;
-        }
-    }
+    // @media (min-width: 910px) {
+    //     ul.social {
+    //         margin-left: -16px;
+    //     }
+    // }
 
     &.navbar-default .navbar-nav {
         background-color: @background-c;
@@ -22,6 +22,11 @@
                 font-size: 1.2em;
                 line-height: 50px;
                 text-transform: uppercase;
+
+                &.disabled {
+                    cursor: not-allowed;
+                    color: #777777 !important;
+                }
 
                 > span {
                     padding: 2px 5px;
