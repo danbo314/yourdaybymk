@@ -10,6 +10,6 @@ export class EmailService {
     constructor(private http: Http) { }
 
     send(param: object) {
-        return this.http.post('https://formspree.io/marykoa@gmail.com', param, { headers: this.headers }).toPromise();
+        return this.http.post('https://formspree.io/mkandersen@yourdaybymk.com', param, { headers: this.headers }).toPromise();
     }
 }
