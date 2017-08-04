@@ -48,23 +48,23 @@
                 <form class="row center-block" #contactForm="ngForm" (ngSubmit)="sendContact(contactForm)">
                     <div class="form-group input-group">
                         <span class="has-float-label col-xs-12">
-                            <input class="form-control" id="first" type="text" placeholder="Jane"/>
+                            <input name="firstName" class="form-control" id="first" type="text" placeholder="Jane" [(ngModel)]="firstName"/>
                             <label for="first">First Name</label>
                         </span>
                         <span class="has-float-label col-xs-12">
-                            <input class="form-control" id="last" type="text" placeholder="Doe"/>
+                            <input name="lastName" class="form-control" id="last" type="text" placeholder="Doe" [(ngModel)]="lastName"/>
                             <label for="last">Last Name</label>
                         </span>
                         <span class="has-float-label col-xs-12">
-                            <input class="form-control" id="email" type="email" placeholder="jane.doe@example.com"/>
+                            <input name="email" class="form-control" id="email" type="email" placeholder="jane.doe@example.com" [(ngModel)]="email"/>
                             <label for="email">Email</label>
                         </span>
                         <span class="has-float-label col-xs-12">
-                            <textarea class="form-control" id="message" placeholder="I am DYING to meet you!"></textarea>
+                            <textarea name="message" class="form-control" id="message" placeholder="I am DYING to meet you!" [(ngModel)]="message"></textarea>
                             <label for="message">Message</label>
                         </span>
                         <span class="has-float-label col-xs-12">
-                            <select class="form-control" id="how">
+                            <select name="source" class="form-control" id="how" [(ngModel)]="source">
                                 <option value="Facebook">Facebook</option>
                                 <option value="Instagram">Instagram</option>
                                 <option value="Google">Google</option>
@@ -75,7 +75,7 @@
                             </select>
                             <label for="how">How Did You Hear About Me?</label>
                         </span>
-                        <button class="btn primary-bg col-xs-4 col-xs-offset-4" type="submit">Submit</button>
+                        <button class="btn col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" [ngClass]="{ 'primary-bg': !showSuccess, 'secondary-bg': showSuccess }" type="submit">{{showSuccess ? "Thanks for the email!" : "Submit"}}</button>
                     </div>
                 </form>
             </div>

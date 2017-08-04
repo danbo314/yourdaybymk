@@ -37,6 +37,7 @@ body {
 }
 
 .primary-bg {
+    color: #FFFFFF !important;
     background-color: @primary-c !important;
 }
 
@@ -45,7 +46,8 @@ body {
 }
 
 .secondary-bg {
-    background-color: @secondary-c;
+    color: #FFFFFF !important;
+    background-color: @secondary-c !important;
 }
 
 .tertiary-c {
@@ -58,4 +60,16 @@ body {
 
 .juicer-feed h1.referral {
     display: none !important;
+}
+
+.has-float-label {
+    margin-top: 10px;
+
+    label {
+        top: -1em;
+
+        &::after {
+            background: transparent;
+        }
+    }
 }
