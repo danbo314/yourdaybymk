@@ -16,6 +16,9 @@ section {
     padding-bottom: 0;
     margin-bottom: 10px;
 
+    width: 94%;
+    margin-left: 3%;
+
     > h1 {
         font-family: adequate;
         font-size: 3.3em;
@@ -26,16 +29,41 @@ section {
         font-size: 1.4em;
     }
 
-    img.headshot {
-        &.vert {
-            height: 532px;
-            width: auto;
-            margin-top: 7px;
+    @intro-width: 1000px;
+
+    #headshot-container {
+        @media (min-width: @intro-width) {
+            width: 50%;
         }
 
-        &.ho {
+        img.headshot {
             width: 100%;
             height: auto;
+
+            &.vert {
+                max-width: 521.5px;
+                max-height: 639.91px;
+                margin-top: 7px;
+
+                @media (max-width: @intro-width) {
+                    display: none;
+                }
+            }
+
+            &.ho {
+                
+                margin-bottom: 10px;
+
+                @media (min-width: @intro-width) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #intro-container {
+        @media (min-width: @intro-width) {
+            width: 50%;
         }
     }
 }

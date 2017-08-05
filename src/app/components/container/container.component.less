@@ -4,13 +4,6 @@
     background-color: @background-c;
     height: 125px;
 
-
-    // @media (min-width: 910px) {
-    //     ul.social {
-    //         margin-left: -16px;
-    //     }
-    // }
-
     &.navbar-default .navbar-nav {
         background-color: @background-c;
 
@@ -55,6 +48,12 @@
 
     .navbar-collapse {
         background-color: #fefefa;
+
+        @media (max-width: 925px) {
+            border-left: 1px solid #cbcbcb;
+            border-right: 1px solid #cbcbcb;
+            border-bottom: 1px solid #cbcbcb;
+        }
     }
 }
 
@@ -72,7 +71,7 @@
     box-shadow: 0 0 5px #cbcbcb;
 }
 
-@media (min-width: 768px) and (max-width: 910px) {
+@media (min-width: 768px) and (max-width: 925px) {
     .collapse {
         display: none !important;
     }
