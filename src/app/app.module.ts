@@ -6,8 +6,16 @@ import { HttpModule } from '@angular/http';
 import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './components/main/main.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { BlogPostComponent } from './components/blog/blog-post/blog-post.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+
+import { PipesModule } from './pipes/pipes.module';
+
+import 'firebase/storage';
 
 declare var require: any;
 
@@ -16,13 +24,20 @@ declare var require: any;
     ContainerComponent,
     HomeComponent,
     BlogComponent,
+    BlogPostComponent,
     SocialMediaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    PipesModule.forRoot()
+  ],
+  exports: [
+    PipesModule
   ],
   providers: [],
   bootstrap: [ContainerComponent]

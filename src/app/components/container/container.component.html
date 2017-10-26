@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse pull-right text-center" id="mk-navbar">
                 <ul class="nav navbar-nav">
                     <!--routerLink="/blog" routerLinkActive="active" (mouseover)="blogText = 'Coming Soon'" (mouseout)="blogText = 'Blog'"-->
-                    <li><a class="secondary-c disabled" target="_blank"><span>Blog Coming Soon!</span></a></li>
+                    <li><a routerLink="/blog" routerLinkActive="active" target="_blank"><span>Blog</span></a></li>
                     <li><a routerLink="/home" fragment="about" routerLinkActive="active"><span>About</span></a></li>
                     <li><a routerLink="/home" fragment="services" routerLinkActive="active"><span>Services</span></a></li>
                     <li><a routerLink="/home" fragment="contact" routerLinkActive="active"><span class="boxed">Contact</span></a></li>
@@ -25,7 +25,9 @@
             </div>
         </div>
     </nav>
-    <router-outlet></router-outlet>
+    <div id="outlet-wrapper">
+        <router-outlet></router-outlet>
+    </div>
     <div id="footer" class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <app-social-media class="text-center col-xs-12 col-md-6"></app-social-media>
