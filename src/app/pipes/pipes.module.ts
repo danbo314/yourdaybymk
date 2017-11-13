@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SafeHtmlPipe } from './safe-html.pipe';
 import { OrderByPipe } from './order-by.pipe';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   imports: [
@@ -9,10 +10,13 @@ import { OrderByPipe } from './order-by.pipe';
   ],
   declarations: [
     SafeHtmlPipe,
-    OrderByPipe
+    OrderByPipe,
+    TruncatePipe
 ],
   exports: [
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    OrderByPipe,
+    TruncatePipe
   ]
 })
 export class PipesModule {

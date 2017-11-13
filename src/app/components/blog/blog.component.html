@@ -1,43 +1,27 @@
-<div id="blog">
-    <div class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-            <img class="col-xs-4" src="/assets/images/blog-intro.png"/>
-            <div class="col-xs-8">
-                <p>Hi There!</p>
-                <p>I’m the proud mama of a fern named Fran and I just learned how to make hot food!  I'm an active nerd, who will only wear real clothes when absolutely necessary, and I will do my best to convince you that ultimate frisbee is a real sport.  Alone time is nice, friends are better, but Whitney Houston is the best.  Saturdays are for LaCroix’s.</p>
+<div id="blog" class="row">
+    <div id="left-content" class="hidden-xs hidden-sm col-md-3">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="tile">
+                    <img src="/assets/images/blog-intro.png" [routerLink]="['/blog']"/>
+                    <h1 class="primary-c">Hi, I'm MK!</h1>
+                    <p>I’m the proud mama of a fern named Fran and I just learned how to make hot food!  I'm an active nerd, who will only wear real clothes when absolutely necessary, and I will do my best to convince you that ultimate frisbee is a real sport.  Alone time is nice, friends are better, but Whitney Houston is the best.  Saturdays are for LaCroix’s.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="jumbotron col-xs-12 col-sm-4" *ngFor="let bc of categories">
-            <h1 class="display-3 primary-c">{{bc.Title}}</h1>
-            <p class="lead">{{bc.Intro}}</p>
-            <hr class="my-4">
-            <div *ngIf="bc.BlogPosts" class="blog-cat">
-                <div *ngFor="let key of JSObject.keys(bc.BlogPosts)" [routerLink]="['/blog-post',key]">
-                    <div class="tile">
-                        <div [ngStyle]="{'background-image': 'url(' + bc.BlogPosts[key].Image + ')'}"><span>{{bc.BlogPosts[key].Title}}</span></div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 class="primary-c">Categories</h3>
+                <div class="tile-wrapper" *ngFor="let cat of categories" [routerLink]="['/blog/category', cat.Title]">
+                    <div class="mk-tile">
+                        <div [ngStyle]="{'background-image': 'url(' + cat.Image + ')'}"><span>{{cat.Title}}</span></div>
                     </div>
+                    <p>{{cat.Intro}}</p>
                 </div>
             </div>
         </div>
     </div>
+    <div id="right-content" class="col-xs-12 col-md-9">
+        <router-outlet></router-outlet>
+    </div>
 </div>
-
-<!-- <div id="blog" class="row">
-    <div class="col-xs-12 col-sm-4">
-        <div class="tile" id="test1">
-            <div><span>My First Blog Post</span></div>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-        <div class="tile" id="test2">
-            <div><span>My Second Blog Post</span></div>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-        <div class="tile" id="test3">
-            <div><span>My Third Blog Post</span></div>
-        </div>
-    </div>
-</div> -->

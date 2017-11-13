@@ -1,0 +1,19 @@
+<div id="blog-category" *ngIf="cat">
+    <div class="jumbotron col-xs-12 col-sm-8 col-sm-offset-2">
+        <h1 class="display-3 primary-c">
+            <ol class="breadcrumb">
+                <li><a routerLink="/blog">Blog</a></li>
+                <li class="active">{{cat.Title}}</li>
+            </ol>
+        </h1>
+        <p class="lead">{{cat.Intro}}</p>
+        <hr class="my-4">
+        <div *ngIf="cat.BlogPosts" class="blog-cat">
+            <div class="col-xs-12 col-sm-6" *ngFor="let post of posts" [routerLink]="['/blog/post', post.Key]">
+                <div class="mk-tile">
+                    <div [ngStyle]="{'background-image': 'url(' + post.Image + ')'}"><span>{{post.Title}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

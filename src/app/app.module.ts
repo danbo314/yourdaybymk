@@ -7,6 +7,8 @@ import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './components/main/main.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog/blog-post/blog-post.component';
+import { BlogCategoryComponent } from './components/blog/blog-category/blog-category.component';
+import { BlogAllComponent } from './components/blog/blog-all/blog-all.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { AngularFireModule } from 'angularfire2';
@@ -25,7 +27,9 @@ declare var require: any;
     HomeComponent,
     BlogComponent,
     BlogPostComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    BlogCategoryComponent,
+    BlogAllComponent
   ],
   imports: [
     BrowserModule,

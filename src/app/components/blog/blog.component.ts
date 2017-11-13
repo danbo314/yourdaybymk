@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase/app'; // for typings
 import { FirebaseApp } from 'angularfire2'; // for methods
@@ -8,38 +8,28 @@ import { FirebaseApp } from 'angularfire2'; // for methods
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.less']
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
   categories;
-  posts;
 
-  private JSObject: Object = Object;
+  constructor(private db: AngularFireDatabase, private fb: FirebaseApp) {}
 
-  constructor(db: AngularFireDatabase, private fb: FirebaseApp) {
-    db.list('/BlogCategory').subscribe((cats) => {
+  ngOnInit() {
+    this.db.list('/BlogCategory').subscribe((cats) => {
       this.categories = cats.sort((a, b) => {
         if (a.SortOrder < b.SortOrder) {
           return -1;
         }
         return 1;
       });
+
       this.categories.forEach((cat) => {
-        if (cat.BlogPosts) {
-          for (const key in cat.BlogPosts) {
-            if (cat.BlogPosts.hasOwnProperty(key)) {
-              db.object(`/BlogPost/${key}`).subscribe((p) => {
-                if (p.ImageUrl) {
-                  const storageRef = fb.storage().ref().child(p.ImageUrl);
-                  storageRef.getDownloadURL().then(url => {
-                    p.Image = url;
-                    cat.BlogPosts[key] = p;
-                  });
-                } else {
-                  p.Image = '/assets/images/IMG_0091.JPG';
-                  cat.BlogPosts[key] = p;
-                }
-              });
-            }
-          }
+        if (cat.ImageUrl) {
+          const storageRef = this.fb.storage().ref().child(cat.ImageUrl);
+          storageRef.getDownloadURL().then(url => {
+            cat.Image = url;
+          });
+        } else {
+          cat.Image = '/assets/images/IMG_0090.JPG';
         }
       });
     });

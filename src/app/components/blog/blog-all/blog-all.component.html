@@ -1,0 +1,11 @@
+<div class="row">
+    <h1 class="text-center posts-title primary-c">Blog Posts</h1>
+    <div class="tile col-xs-12 col-sm-5" *ngFor="let post of posts">
+        <a [routerLink]="['/blog/post', post.Key]" class="img-wrapper">
+            <img [src]="post.Image"/>
+        </a>
+        <h1>{{post.Title}}</h1>
+        <p [innerHTML]="post.Preview"></p>
+        <a [routerLink]="['/blog/post', post.Key]">Read Full Post <i class="fa fa-angle-right"></i></a>
+    </div>
+</div>
