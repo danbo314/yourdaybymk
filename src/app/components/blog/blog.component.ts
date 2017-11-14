@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase/app'; // for typings
 import { FirebaseApp } from 'angularfire2'; // for methods
@@ -11,7 +13,7 @@ import { FirebaseApp } from 'angularfire2'; // for methods
 export class BlogComponent implements OnInit {
   categories;
 
-  constructor(private db: AngularFireDatabase, private fb: FirebaseApp) {}
+  constructor(private db: AngularFireDatabase, private fb: FirebaseApp, private router: Router) {}
 
   ngOnInit() {
     this.db.list('/BlogCategory').subscribe((cats) => {
@@ -32,6 +34,13 @@ export class BlogComponent implements OnInit {
           cat.Image = '/assets/images/IMG_0090.JPG';
         }
       });
+    });
+
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0);
     });
   }
 }

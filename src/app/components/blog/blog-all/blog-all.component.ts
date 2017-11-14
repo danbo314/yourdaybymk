@@ -30,7 +30,7 @@ export class BlogAllComponent implements OnInit {
       });
 
       this.posts = posts.sort((a, b) => {
-        return new Date(a.Date).getTime() - new Date(b.Date).getTime();
+        return new Date(b.Date).getTime() - new Date(a.Date).getTime();
       });
     });
   }

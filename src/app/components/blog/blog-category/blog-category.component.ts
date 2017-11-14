@@ -20,35 +20,36 @@ export class BlogCategoryComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap
-    .switchMap((params: ParamMap) => this.db.object(`/BlogCategory/${params.get('category')}`))
-    .subscribe(cat => {
-      this.cat = cat;
-      if (cat.BlogPosts) {
-        for (const key in cat.BlogPosts) {
-          if (cat.BlogPosts.hasOwnProperty(key)) {
-            this.db.object(`/BlogPost/${key}`).subscribe((p) => {
-              if (p.ImageUrl) {
-                const storageRef = this.fb.storage().ref().child(p.ImageUrl);
-                storageRef.getDownloadURL().then(url => {
-                  p.Image = url;
+      .switchMap((params: ParamMap) => this.db.object(`/BlogCategory/${params.get('category')}`))
+      .subscribe(cat => {
+        this.cat = cat;
+        this.posts = [];
+        if (cat.BlogPosts) {
+          for (const key in cat.BlogPosts) {
+            if (cat.BlogPosts.hasOwnProperty(key)) {
+              this.db.object(`/BlogPost/${key}`).subscribe((p) => {
+                if (p.ImageUrl) {
+                  const storageRef = this.fb.storage().ref().child(p.ImageUrl);
+                  storageRef.getDownloadURL().then(url => {
+                    p.Image = url;
+                    this.posts.push(p);
+                    this.sort();
+                  });
+                } else {
+                  p.Image = '/assets/images/IMG_0091.JPG';
                   this.posts.push(p);
                   this.sort();
-                });
-              } else {
-                p.Image = '/assets/images/IMG_0091.JPG';
-                this.posts.push(p);
-                this.sort();
-              }
-            });
+                }
+              });
+            }
           }
         }
-      }
-    });
+      });
   }
 
   sort() {
     this.posts = this.posts.sort((a, b) => {
-      return new Date(a.Date).getTime() - new Date(b.Date).getTime();
+      return new Date(b.Date).getTime() - new Date(a.Date).getTime();
     });
   }
 

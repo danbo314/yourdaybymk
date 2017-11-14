@@ -1,6 +1,6 @@
 <div class="jumbotron col-xs-10 col-xs-offset-1" *ngIf="post">
     <img [src]="post.Image" class="hidden-sm hidden-xs"/>
     <h1 class="display-3 primary-c text-center">{{post.Title}}</h1>
-    <h2 class="text-center">{{post.Date}}</h2>
+    <h2 class="text-center">{{post.Date | date:'longDate'}}</h2>
     <p class="lead post-content" [innerHTML]="post.Post | safeHtml"></p>
 </div>
