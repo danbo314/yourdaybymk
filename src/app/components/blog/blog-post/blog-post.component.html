@@ -3,4 +3,5 @@
     <h1 class="display-3 primary-c text-center">{{post.Title}}</h1>
     <h2 class="text-center">{{post.Date | date:'longDate'}}</h2>
     <p class="lead post-content" [innerHTML]="post.Post | safeHtml"></p>
+    <modal-gallery [modalImages]="post.AdditionalImages"></modal-gallery>
 </div>

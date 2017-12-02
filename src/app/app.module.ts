@@ -15,6 +15,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
+import 'hammerjs';
+import 'mousetrap';
+import { ModalGalleryModule } from 'angular-modal-gallery';
+
 import { PipesModule } from './pipes/pipes.module';
 
 import 'firebase/storage';
@@ -38,7 +42,8 @@ declare var require: any;
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    PipesModule.forRoot()
+    PipesModule.forRoot(),
+    ModalGalleryModule.forRoot()
   ],
   exports: [
     PipesModule

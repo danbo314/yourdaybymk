@@ -4,6 +4,8 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import * as firebase from 'firebase/app'; // for typings
 import { FirebaseApp } from 'angularfire2'; // for methods
 
+import { Image } from 'angular-modal-gallery';
+
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -26,12 +28,25 @@ export class BlogPostComponent implements OnInit {
           storageRef.getDownloadURL().then(url => {
             p.Image = url;
             this.post = p;
+            this.checkAdditionalImages();
           });
         }  else {
           p.Image = '/assets/images/IMG_0091.JPG';
           this.post = p;
         }
       });
+  }
+
+  checkAdditionalImages() {
+    if (this.post.NumAdditionalImages > 0) {
+      this.post.AdditionalImages = new Array<Image>();
+      for (let i = 1; i <= this.post.NumAdditionalImages; i++) {
+        const storageRef = this.fb.storage().ref().child(this.post.Key + '-' + i + '.png');
+        storageRef.getDownloadURL().then(url => {
+          this.post.AdditionalImages.push(new Image(url));
+        });
+      }
+    }
   }
 
 }
