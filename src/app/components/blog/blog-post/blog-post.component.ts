@@ -38,13 +38,19 @@ export class BlogPostComponent implements OnInit {
   }
 
   checkAdditionalImages() {
-    if (this.post.NumAdditionalImages > 0) {
-      this.post.AdditionalImages = new Array<Image>();
-      for (let i = 1; i <= this.post.NumAdditionalImages; i++) {
-        const storageRef = this.fb.storage().ref().child(this.post.Key + '-' + i + '.png');
-        storageRef.getDownloadURL().then(url => {
-          this.post.AdditionalImages.push(new Image(url));
-        });
+    if (this.post.AdditionalImages) {
+      this.post.AdditionalImageGroupKeys = Object.keys(this.post.AdditionalImages);
+      for (const key in this.post.AdditionalImages) {
+        if (this.post.AdditionalImages.hasOwnProperty(key)) {
+          this.post.AdditionalImages[key].Images = new Array<Image>();
+
+          for (let i = this.post.AdditionalImages[key].MinImageNum; i <= this.post.AdditionalImages[key].MaxImageNum; i++) {
+            const storageRef = this.fb.storage().ref().child(this.post.Key + '-' + i + this.post.AdditionalImages[key].FileType);
+            storageRef.getDownloadURL().then(url => {
+              this.post.AdditionalImages[key].Images.push(new Image(url));
+            });
+          }
+        }
       }
     }
   }

@@ -3,6 +3,10 @@
     <h1 class="display-3 primary-c text-center">{{post.Title}}</h1>
     <h2 class="text-center">{{post.Date | date:'longDate'}}</h2>
     <p class="lead post-content" [innerHTML]="post.Post | safeHtml"></p>
-    <p *ngIf="post.AdditionalImages" class="text-center"><strong>click images to enlarge</strong></p>
-    <modal-gallery [modalImages]="post.AdditionalImages"></modal-gallery>
+    <div *ngIf="post.AdditionalImages">
+        <div *ngFor="let key of post.AdditionalImageGroupKeys">
+            <h2>{{post.AdditionalImages[key].Title}}</h2>
+            <modal-gallery [modalImages]="post.AdditionalImages[key].Images"></modal-gallery>
+        </div>
+    </div>
 </div>
