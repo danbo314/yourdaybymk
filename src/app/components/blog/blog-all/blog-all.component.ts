@@ -17,7 +17,9 @@ export class BlogAllComponent implements OnInit {
   ngOnInit() {
     this.db.list('/BlogPost').subscribe((posts) => {
       posts.forEach((p) => {
-        p.Preview = p.Post.length > 100 ? p.Post.substring(0, 100) + '...' : p.Post;
+        const postCopy = p.Post.replace(/<img.*\/>|<a.*">|<\/a>/g, '');
+
+        p.Preview = postCopy.length > 100 ? postCopy.substring(0, 100) + '...' : postCopy;
 
         if (p.ImageUrl) {
           const storageRef = this.fb.storage().ref().child(p.ImageUrl);

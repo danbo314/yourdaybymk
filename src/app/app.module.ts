@@ -22,6 +22,9 @@ import { ModalGalleryModule } from 'angular-modal-gallery';
 import { PipesModule } from './pipes/pipes.module';
 
 import 'firebase/storage';
+import { AboutComponent } from 'app/components/about/about.component';
+import { ContactComponent } from 'app/components/contact/contact.component';
+import { ServicesComponent } from 'app/components/services/services.component';
 
 declare var require: any;
 
@@ -33,7 +36,10 @@ declare var require: any;
     BlogPostComponent,
     SocialMediaComponent,
     BlogCategoryComponent,
-    BlogAllComponent
+    BlogAllComponent,
+    AboutComponent,
+    ContactComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

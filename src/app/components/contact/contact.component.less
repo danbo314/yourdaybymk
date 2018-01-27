@@ -1,0 +1,33 @@
+@import "../../constants.less";
+
+form {
+    input,
+    textarea {
+        border-radius: 4px !important;
+    }
+}
+
+#contact strong {
+    margin-right: 10px;
+}
+
+.has-float-label {
+    margin-bottom: 10px;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+label {
+    font-size: 100%;
+    top: .7em;
+    left: 2em;
+    font-weight: 200;
+}
+
+.btn.primary-bg {
+    color: @background-c;
+    font-family: Mesmerize;
+
+    &:hover,
+    &:active {
+        background-color: #427E6A !important;
+    }
+}

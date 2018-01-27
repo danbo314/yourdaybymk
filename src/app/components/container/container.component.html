@@ -15,11 +15,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse pull-right text-center" id="mk-navbar">
                 <ul class="nav navbar-nav">
-                    <!--routerLink="/blog" routerLinkActive="active" (mouseover)="blogText = 'Coming Soon'" (mouseout)="blogText = 'Blog'"-->
                     <li><a routerLink="/blog" routerLinkActive="active" target="_blank"><span>Blog</span></a></li>
-                    <li><a routerLink="/home" fragment="about" routerLinkActive="active"><span>About</span></a></li>
-                    <li><a routerLink="/home" fragment="services" routerLinkActive="active"><span>Services</span></a></li>
-                    <li><a routerLink="/home" fragment="contact" routerLinkActive="active"><span class="boxed">Contact</span></a></li>
+                    <li><a routerLink="/about" routerLinkActive="active"><span>About</span></a></li>
+                    <li><a routerLink="/services" routerLinkActive="active"><span>Services</span></a></li>
+                    <li><a routerLink="/contact" routerLinkActive="active"><span class="boxed">Contact</span></a></li>
                 </ul>
                 <app-social-media></app-social-media>
             </div>
@@ -28,10 +27,14 @@
     <div id="outlet-wrapper">
         <router-outlet></router-outlet>
     </div>
+    <section id="insta-feed" class="row">
+        <ul class="juicer-feed" data-feed-id="yourdaybymk"></ul>
+    </section>
     <div id="footer" class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <app-social-media class="text-center col-xs-12 col-md-6"></app-social-media>
-            <span class="text-center col-xs-12 col-md-6"><a href="http://danbolivar.me" target="_blank">Dan Bol&iacute;var</a> &copy; 2017</span>
+            <span class="text-center col-xs-12 col-md-6"><a href="http://danbolivar.me" target="_blank">Dan Bol&iacute;var</a> &copy; 2018</span>
         </div>
     </div>
 </div>
+    
